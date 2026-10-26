@@ -109,3 +109,49 @@
 .contacto-btn:active {
     transform: translateY(0);
 }
+
+/* ===== MENSAJES DEL FORMULARIO (los muestra PHP) ===== */
+.contacto-aviso {
+    width: 100%;
+    max-width: 800px;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contacto-aviso--ok {
+    background: #eef5e6;
+    border: 1px solid #9bbf7a;
+    color: #3d5a24;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.contacto-aviso--ok .contacto-btn {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.contacto-aviso--error {
+    background: #fbeaea;
+    border: 1px solid #d99a9a;
+    color: #8a2c2c;
+}
+
+.form-error {
+    font-size: 13px;
+    color: #a63a3a;
+}
+
+/* Campo anti-spam: fuera de la pantalla */
+.campo-trampa {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

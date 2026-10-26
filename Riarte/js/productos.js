@@ -404,7 +404,7 @@ if (filtrosSidebar) {
 // ============================================
 // Esta función permite que otros enlaces en el sitio puedan filtrar productos
 // automáticamente. Por ejemplo, si desde la página de inicio alguien hace click
-// en "Tablas de Asado", el enlace puede ser: productos.html?tabla=asado
+// en "Tablas de Asado", el enlace puede ser: productos.php?tabla=asado
 //
 // Esta función lee esos parámetros de la URL y:
 // - Busca el radio button correspondiente y lo marca

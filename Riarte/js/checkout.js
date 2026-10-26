@@ -46,7 +46,7 @@ function cargarCarrito() {
 
     if (carrito.length === 0) {
         alert("Tu carrito está vacío. Serás redirigido a la página de productos.");
-        window.location.href = "/pages/productos/productos.html";
+        window.location.href = "productos.php";
         return;
     }
 
@@ -299,7 +299,7 @@ Te contactaremos al ${email} para coordinar los detalles.
     // Por ahora, solo mostramos el mensaje y redirigimos al inicio
     setTimeout(() => {
         localStorage.removeItem("carrito");
-        window.location.href = "/index.html";
+        window.location.href = "../index.php";
     }, 2000);
 });
 

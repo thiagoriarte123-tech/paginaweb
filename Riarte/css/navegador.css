@@ -62,3 +62,8 @@
         font-size: 0.82rem;
     }
 }
+
+/* Página actual en el menú (la marca PHP) */
+.navegador a.activo {
+    color: #a0522d;
+}

@@ -178,7 +178,7 @@ btnFinalizar.addEventListener("click", () => {
         alert("Tu carrito está vacío. Agrega productos antes de finalizar la compra.");
         return;
     }
-    window.location.href = "checkout.html";
+    window.location.href = "checkout.php";
 });
 
 // ============================================

@@ -1,57 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablas El Cóndor - Checkout</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navegador.css">
-    <link rel="stylesheet" href="../css/checkout.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    <header class="navbar">
-        <a href="../index.html">
-            <img src="../images/logo.webp" alt="Logo" class="logo-img">
-        </a>
-
-        <nav class="navegador">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <a href="carrito.html" class="carrito-link">
-            <img src="../images/carlog.webp" alt="Carrito" class="carrito-img">
-            <span class="carrito-contador" id="carrito-contador"></span>
-        </a>
-    </header>
-
-    <div class="barra-promo">
-        <div class="barra-promo-track">
-            <div class="barra-promo-grupo">
-                <span>Diseños únicos</span>
-                <span>Envíos a todo el país</span>
-                <span>Hechas a mano</span>
-                <span>Personalizá tus productos</span>
-            </div>
-            <div class="barra-promo-grupo">
-                <span>Diseños únicos</span>
-                <span>Envíos a todo el país</span>
-                <span>Hechas a mano</span>
-                <span>Personalizá tus productos</span>
-            </div>
-        </div>
-    </div>
-
+<?php
+$titulo  = 'Tablas El Cóndor - Checkout';
+$base    = '../';
+$estilos = ['checkout.css'];
+$scripts = ['checkout.js'];
+$actual  = '';
+require __DIR__ . '/../includes/header.php';
+?>
     <main>
         <section class="checkout-hero">
             <h2>Finalizar compra</h2>
@@ -163,36 +117,4 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Tablas El Cóndor</p>
-
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h4>Condorito</h4>
-                <p>De la naturaleza a tu mesada.</p>
-            </div>
-
-            <div>
-                <h5>Explorar</h5>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h5>Seguinos</h5>
-                <ul>
-                    <li><a href="https://www.instagram.com/tablaselcondor?igsh=Z2ZkdjkxanBiOWhl" target="_blank" rel="noopener"><img src="../images/instagram.webp" alt="Instagram" class="instagram-logo"></a></li>
-                    <li><a href="https://www.facebook.com/share/19QZ3HHV6k/" target="_blank" rel="noopener"><img src="../images/facebook.webp" alt="Facebook" class="facebook-logo"></a></li>
-                    <li><a href="https://wa.me/TU_NUMERO_WHATSAPP" target="_blank" rel="noopener"><img src="../images/whatsapp.webp" alt="WhatsApp" class="whatsapp-logo"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/checkout.js"></script>
-</body>
-</html>
+<?php require __DIR__ . '/../includes/footer.php'; ?>
