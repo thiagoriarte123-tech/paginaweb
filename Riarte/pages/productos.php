@@ -1,9 +1,29 @@
 <?php
+require_once __DIR__ . '/../includes/auth.php';
+require_once __DIR__ . '/../includes/productos.php';
+
 $titulo  = 'Tablas El Cóndor - Productos';
 $base    = '../';
 $estilos = ['productos.css'];
 $scripts = ['productos.js'];
 $actual  = 'pages/productos.php';
+
+// Los productos salen de la base de datos y se le pasan a productos.js,
+// que sigue encargándose de los filtros, el modal y el carrito.
+$catalogo = [];
+foreach (obtenerProductos() as $p) {
+    $catalogo[] = [
+        'id'          => (int) $p['id'],
+        'nombre'      => $p['nombre'],
+        'precio'      => (int) $p['precio'],
+        'madera'      => $p['madera'],
+        'tabla'       => $p['tabla'],
+        'imagen'      => imagenProducto($p['imagen'], $base),
+        'descripcion' => $p['descripcion'],
+    ];
+}
+$jsDatos = ['PRODUCTOS' => $catalogo];
+
 require __DIR__ . '/../includes/header.php';
 ?>
     <main>
@@ -28,18 +48,17 @@ require __DIR__ . '/../includes/header.php';
                 <!-- Tipo de madera -->
                 <div class="filtro-grupo">
                     <h4 class="filtro-grupo__titulo">Tipo de madera</h4>
-                    <label><input type="radio" name="madera" value="roble"> Roble</label>
-                    <label><input type="radio" name="madera" value="guayubira"> Guayubira</label>
-                    <label><input type="radio" name="madera" value="eucalipto"> Eucalipto</label>
+<?php foreach ($maderas as $valor => $texto): ?>
+                    <label><input type="radio" name="madera" value="<?= $valor ?>"> <?= $texto ?></label>
+<?php endforeach; ?>
                 </div>
 
                 <!-- Tipo de tabla -->
                 <div class="filtro-grupo">
                     <h4 class="filtro-grupo__titulo">Tipo de tabla</h4>
-                    <label><input type="radio" name="tabla" value="asado"> Asado</label>
-                    <label><input type="radio" name="tabla" value="cocina"> Cocina</label>
-                    <label><input type="radio" name="tabla" value="picada"> Picada</label>
-                    <label><input type="radio" name="tabla" value="plato"> Plato</label>
+<?php foreach ($tiposTabla as $valor => $texto): ?>
+                    <label><input type="radio" name="tabla" value="<?= $valor ?>"> <?= $texto ?></label>
+<?php endforeach; ?>
                 </div>
 
                 <!-- Botones -->

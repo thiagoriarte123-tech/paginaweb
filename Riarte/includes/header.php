@@ -9,7 +9,9 @@
 //   $estilos  → lista de hojas CSS propias de esa página (opcional)
 //   $actual   → archivo del menú que se marca como página actual (opcional)
 
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/auth.php';
+
+$usuario = usuarioActual();
 
 $titulo  = $titulo  ?? $sitio['nombre'];
 $base    = $base    ?? '';
@@ -47,6 +49,14 @@ $todosLosEstilos = array_merge($estilosComunes, $estilos, ['footer.css']);
 <?php endforeach; ?>
             </ul>
         </nav>
+
+<?php if (!$usuario): ?>
+        <a href="<?= $base ?>pages/login.php" class="usuario-link">Ingresar</a>
+<?php elseif ($usuario['rol'] === 'admin'): ?>
+        <a href="<?= $base ?>admin/index.php" class="usuario-link">Panel</a>
+<?php else: ?>
+        <a href="<?= $base ?>pages/cuenta.php" class="usuario-link">Mi cuenta</a>
+<?php endif; ?>
 
         <a href="<?= $base ?>pages/carrito.php" class="carrito-link">
             <img src="<?= $base ?>images/carlog.webp" alt="Carrito" class="carrito-img">

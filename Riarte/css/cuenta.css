@@ -1,0 +1,207 @@
+/* ===== CUENTA: login, registro, mi cuenta e instalador ===== */
+
+.cuenta {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px 70px;
+}
+
+.cuenta-caja {
+    width: 100%;
+    max-width: 440px;
+    background: #fdf6ee;
+    border: 1px solid #e2cfb2;
+    border-radius: 10px;
+    padding: 36px 32px;
+    box-shadow: 0 6px 20px rgba(59, 42, 20, 0.08);
+}
+
+.cuenta-caja--ancha {
+    max-width: 720px;
+}
+
+.cuenta-caja h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    color: #3b2a14;
+    margin-bottom: 8px;
+}
+
+.cuenta-caja h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    color: #3b2a14;
+    margin: 32px 0 14px;
+    padding-top: 24px;
+    border-top: 1px solid #e2cfb2;
+}
+
+.cuenta-texto {
+    color: #7a5c3a;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.cuenta-texto code {
+    background: #f0e3cf;
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+.cuenta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #5a3e1b;
+    letter-spacing: 0.3px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #c8a97e;
+    border-radius: 6px;
+    padding: 11px 13px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    color: #3b2a14;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo textarea {
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #8b5e2a;
+    box-shadow: 0 0 0 3px rgba(139, 94, 42, 0.12);
+}
+
+.campo-error {
+    font-size: 13px;
+    color: #a63a3a;
+}
+
+.campo-ayuda {
+    font-size: 13px;
+    color: #8a7058;
+    line-height: 1.4;
+}
+
+.cuenta-btn {
+    display: inline-block;
+    background: #6b3e1a;
+    color: #fdf3e3;
+    border: none;
+    border-radius: 6px;
+    padding: 13px 22px;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.cuenta-btn:hover {
+    background: #8b5e2a;
+    transform: translateY(-1px);
+}
+
+.cuenta-btn--secundario {
+    background: transparent;
+    color: #6b3e1a;
+    border: 1px solid #c8a97e;
+}
+
+.cuenta-btn--secundario:hover {
+    background: #f0e3cf;
+}
+
+.cuenta-pie {
+    margin-top: 22px;
+    font-size: 14px;
+    color: #7a5c3a;
+    text-align: center;
+}
+
+.cuenta-pie a {
+    color: #6b3e1a;
+    font-weight: bold;
+}
+
+.cuenta-datos {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 18px;
+    font-size: 15px;
+    color: #3b2a14;
+    margin-bottom: 6px;
+}
+
+.cuenta-datos dt {
+    color: #8a7058;
+}
+
+.cuenta-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+/* ===== AVISOS (éxito / error) ===== */
+.aviso {
+    padding: 13px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+.aviso--ok {
+    background: #eef5e6;
+    border: 1px solid #9bbf7a;
+    color: #3d5a24;
+}
+
+.aviso--error {
+    background: #fbeaea;
+    border: 1px solid #d99a9a;
+    color: #8a2c2c;
+}
+
+@media (max-width: 500px) {
+    .cuenta {
+        padding: 30px 14px 50px;
+    }
+
+    .cuenta-caja {
+        padding: 26px 20px;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 16px; /* evita el zoom automático en iPhone */
+    }
+}

@@ -1,0 +1,289 @@
+/* ===== PANEL DE ADMINISTRACIÓN ===== */
+
+.admin {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+}
+
+.admin-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.admin-cabecera h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 32px;
+    color: #3b2a14;
+    margin-top: 6px;
+}
+
+.admin-etiqueta {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #a0522d;
+    font-weight: bold;
+}
+
+.admin-volver {
+    font-size: 14px;
+    color: #7a5c3a;
+    text-decoration: none;
+}
+
+.admin-volver:hover {
+    color: #a0522d;
+}
+
+/* --- Resumen --- */
+.admin-resumen {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.admin-dato {
+    background: #fdf6ee;
+    border: 1px solid #e2cfb2;
+    border-radius: 8px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.admin-dato__numero {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #6b3e1a;
+}
+
+.admin-dato__texto {
+    font-size: 14px;
+    color: #7a5c3a;
+}
+
+/* --- Tabla de productos --- */
+.admin-tabla-wrap {
+    background: #fdf6ee;
+    border: 1px solid #e2cfb2;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.admin-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #3b2a14;
+}
+
+.admin-tabla th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #8a7058;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e2cfb2;
+    white-space: nowrap;
+}
+
+.admin-tabla td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #efe2cf;
+    vertical-align: middle;
+}
+
+.admin-tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-tabla tbody tr:hover {
+    background: #f8eddd;
+}
+
+.admin-tabla .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.admin-tabla .acciones {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.admin-tabla .acciones form {
+    display: inline;
+}
+
+.admin-nombre {
+    font-weight: bold;
+    min-width: 200px;
+}
+
+.admin-foto {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #efe2cf;
+    display: block;
+}
+
+.admin-btn {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 1px solid #c8a97e;
+    background: #fff;
+    color: #5a3e1b;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.admin-btn:hover {
+    background: #6b3e1a;
+    border-color: #6b3e1a;
+    color: #fdf3e3;
+}
+
+.admin-btn--peligro {
+    color: #9a3030;
+    border-color: #dcaaaa;
+}
+
+.admin-btn--peligro:hover {
+    background: #9a3030;
+    border-color: #9a3030;
+    color: #fff;
+}
+
+.admin-vacio {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fdf6ee;
+    border: 1px dashed #c8a97e;
+    border-radius: 10px;
+    color: #7a5c3a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-pie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* --- Formulario de producto --- */
+.admin-form {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 28px;
+    background: #fdf6ee;
+    border: 1px solid #e2cfb2;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.admin-form__fila {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.admin-form__foto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-form__label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #5a3e1b;
+}
+
+.admin-vista-previa {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2cfb2;
+    background: #efe2cf;
+}
+
+.admin-subir {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 1px dashed #c8a97e;
+    border-radius: 6px;
+    color: #6b3e1a;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.admin-subir:hover {
+    background: #f0e3cf;
+}
+
+.admin-subir input {
+    display: none;
+}
+
+.admin-check {
+    font-size: 14px;
+    color: #7a5c3a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.admin-form__botones {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 6px;
+    border-top: 1px solid #e2cfb2;
+    padding-top: 22px;
+}
+
+@media (max-width: 800px) {
+    .admin-form {
+        grid-template-columns: 1fr;
+        padding: 22px 18px;
+    }
+
+    .admin-form__fila {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form__foto {
+        max-width: 320px;
+    }
+
+    .admin-cabecera h2 {
+        font-size: 26px;
+    }
+}

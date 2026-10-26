@@ -3,9 +3,11 @@
 // PIE DE PÁGINA COMÚN — se incluye en todas las páginas
 // ============================================
 // Usa las variables que ya definió header.php ($base, $sitio, $menu).
-// Opcional: $scripts → lista de JS propios de la página (se cargan antes de script.js)
+// Opcional: $scripts  → lista de JS propios de la página (se cargan antes de script.js)
+//           $jsDatos  → datos que la página le pasa a JavaScript (se cargan antes que todo)
 
 $scripts = $scripts ?? [];
+$jsDatos = $jsDatos ?? [];
 ?>
 
     <footer>
@@ -37,6 +39,9 @@ $scripts = $scripts ?? [];
         </div>
     </footer>
 
+<?php foreach ($jsDatos as $nombreVar => $valor): ?>
+    <script>window.<?= $nombreVar ?> = <?= json_encode($valor, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
+<?php endforeach; ?>
 <?php foreach ($scripts as $js): ?>
     <script src="<?= $base ?>js/<?= $js ?>"></script>
 <?php endforeach; ?>

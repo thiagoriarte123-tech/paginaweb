@@ -20,6 +20,23 @@ $sitio = [
     'email_contacto' => 'tu-correo@ejemplo.com',
 ];
 
+// ============================================
+// BASE DE DATOS (MySQL de XAMPP)
+// ============================================
+// Estos son los valores que trae XAMPP por defecto: usuario "root" sin contraseña.
+// Cuando subas la página a un hosting, el hosting te da estos cuatro datos.
+$db_config = [
+    'host'     => 'localhost',
+    'nombre'   => 'tablas_condor',
+    'usuario'  => 'root',
+    'clave'    => '',
+];
+
+// Opciones de los productos. Se usan en los filtros del catálogo
+// y en el panel, así que si agregás una madera nueva, la sumás acá.
+$maderas    = ['roble' => 'Roble', 'guayubira' => 'Guayubira', 'eucalipto' => 'Eucalipto'];
+$tiposTabla = ['asado' => 'Asado', 'cocina' => 'Cocina', 'picada' => 'Picada', 'plato' => 'Plato'];
+
 // Links del menú: texto => archivo (relativo a la carpeta raíz del sitio)
 $menu = [
     'Inicio'    => 'index.php',

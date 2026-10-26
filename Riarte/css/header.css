@@ -111,3 +111,36 @@ header {
         right: -6px;
     }
 }
+
+/* ===== LINK DE USUARIO (Ingresar / Mi cuenta / Panel) ===== */
+.usuario-link {
+    margin-left: auto;
+    margin-right: 22px;
+    padding: 8px 14px;
+    border: 1px solid #c8a97e;
+    border-radius: 6px;
+    color: #5a3e1b;
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.usuario-link:hover {
+    background: #6b3e1a;
+    border-color: #6b3e1a;
+    color: #fdf3e3;
+}
+
+/* Si está el link de usuario, el carrito va pegado a él */
+.usuario-link + .carrito-link {
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .usuario-link {
+        margin-right: 14px;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}

@@ -8,113 +8,13 @@
 // - Agrega productos al carrito de compras
 
 // ============================================
-// 1. BASE DE DATOS DE PRODUCTOS
+// 1. PRODUCTOS (vienen de la base de datos)
 // ============================================
-// Acá están todos los productos que vendemos. Cada uno tiene:
-// - id: número único para identificarlo
-// - nombre: cómo se llama el producto
-// - precio: cuánto cuesta en pesos argentinos
-// - madera: de qué madera está hecho (roble, guayubira, eucalipto)
-// - tabla: para qué sirve (asado, cocina, picada, plato)
-// - imagen: la ruta de la foto del producto
-// - descripcion: texto explicativo sobre el producto
-//
-// IMPORTANTE: Los valores de "madera" y "tabla" tienen que coincidir
-// exactamente con los botones de radio que están en el HTML para que
-// los filtros funcionen bien.
-const productos = [
-      {
-        id: 1,
-        nombre: "Tabla de asado Guayubira 50x30",
-        precio: 40000,
-        madera: "guayubira",
-        tabla: "asado",
-        imagen: "../images/asado grande guayubira.webp",
-        descripcion: "Tabla de asado grande ideal para cortar carnes y servir. Hecha de madera de guayubira resistente y duradera. Medidas 50x30 cm."
-    },
-    {
-        id: 2,
-        nombre: "Tabla de asado (chico) Guayubira 40x30",
-        precio: 35000,
-        madera: "guayubira",
-        tabla: "asado",
-        imagen: "../images/asado chico guayubira.webp",
-        descripcion: "Tabla de asado tamaño mediano perfecta para asados familiares. Madera de guayubira de alta calidad. Medidas 40x30 cm."
-    },
-    {
-        id: 3,
-        nombre: "Tabla de cocina simple Guayubira 40x25",
-        precio: 20000,
-        madera: "guayubira",
-        tabla: "cocina",
-        imagen: "../images/cocina guayubira.webp",
-        descripcion: "Tabla de cocina versátil para preparación diaria. Madera de guayubira resistente a humedad. Medidas 40x25 cm."
-    },
-    {
-        id: 4,
-        nombre: "Tabla de cocina colgable Guayubira 40x25",
-        precio: 20000,
-        madera: "guayubira",
-        tabla: "cocina",
-        imagen: "../images/cocina guayubira cuelga.webp",
-        descripcion: "Tabla de cocina con agujero para colgar, ideal para ahorrar espacio. Madera de guayubira premium. Medidas 40x25 cm."
-    },
-    {
-        id: 5,
-        nombre: "Tabla de cocina simple Eucalipto 40x25",
-        precio: 15000,
-        madera: "eucalipto",
-        tabla: "cocina",
-        imagen: "../images/",
-        descripcion: "Tabla de cocina económica y funcional. Madera de eucalipto tratada. Medidas 40x25 cm."
-    },
-    {
-        id: 6,
-        nombre: "Tabla de cocina colgable Eucalipto 40x25",
-        precio: 15000,
-        madera: "eucalipto",
-        tabla: "cocina",
-        imagen: "../images/",
-        descripcion: "Tabla de cocina colgable de eucalipto. Perfecta para cocinas pequeñas. Medidas 40x25 cm."
-    },
-    {
-        id: 7,
-        nombre: "Tabla de asado chico Eucalipto 40x30",
-        precio: 20000,
-        madera: "eucalipto",
-        tabla: "asado",
-        imagen: "../images/productos/picada-eucalipto.webp",
-        descripcion: "Tabla de asado compacta de eucalipto. Ideal para asados íntimos. Medidas 40x30 cm."
-    },
-    {
-        id: 8,
-        nombre: "Tabla de asado Eucalipto 50x30",
-        precio: 25000,
-        madera: "eucalipto",
-        tabla: "asado",
-        imagen: "../images/asado grande eucalipto.webp",
-        descripcion: "Tabla de asado grande de eucalipto resistente. Perfecta para cortes grandes de carne. Medidas 50x30 cm."
-    },
-    {
-        id: 9,
-        nombre: "Tabla de picada Eucalipto 50x17",
-        precio: 25000,
-        madera: "eucalipto",
-        tabla: "picada",
-        imagen: "../images/picada eucalipto.webp",
-        descripcion: "Tabla alargada ideal para picadas y aperitivos. Madera de eucalipto de calidad. Medidas 50x17 cm."
-    },
-     {
-        id: 10,
-        nombre: "plato de Eucalipto 25x25",
-        precio: 8000,
-        madera: "eucalipto",
-        tabla: "plato",
-        imagen: "../images/plato eucalipto.webp",
-        descripcion: "Plato de madera cuadrado ideal para servir. Madera de eucalipto tratada. Medidas 25x25 cm."
-    }
-    // Agregá acá el resto de tus productos, con la misma estructura
-];
+// Los productos ya no se escriben acá: se cargan desde el panel de
+// administración y PHP los deja listos en window.PRODUCTOS
+// (ver pages/productos.php). Cada producto tiene:
+// id, nombre, precio, madera, tabla, imagen y descripcion.
+const productos = window.PRODUCTOS || [];
 
 // ============================================
 // 2. CONEXIÓN CON LA PÁGINA HTML

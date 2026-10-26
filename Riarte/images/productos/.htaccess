@@ -1,0 +1,4 @@
+# Las fotos subidas desde el panel nunca se ejecutan como código
+<FilesMatch "\.(php|phtml|phar|php\d)$">
+    Require all denied
+</FilesMatch>
